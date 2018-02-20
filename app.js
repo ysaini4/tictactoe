@@ -35,8 +35,8 @@ function MainCtrl($scope,$timeout) {
 		$scope.boardcol = {};
 		$scope.board = [];
 		$scope.remaincells = [];
-		for(var i=1;i<=30;i++){ var temp = [];
-			for(var j=1;j<=65;j++){
+		for(var i=1;i<=15;i++){ var temp = [];
+			for(var j=1;j<=12;j++){
 				var cell = 'r'+i+'c'+j;
 				temp.push(cell);
 				$scope.remaincells.push(cell);
@@ -65,7 +65,7 @@ function MainCtrl($scope,$timeout) {
 			      	if(!resultcreater($scope.p2queue,'yogy'))
 			      		$scope.playerturnmsg = turnmsgs[wmf]['player'];
 			    }
-      		}, 100);
+      		}, 0);
       	}
 
 	}
