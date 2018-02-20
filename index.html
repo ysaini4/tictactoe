@@ -1,0 +1,46 @@
+<html>
+	<head>
+	  <title>Tic All</title>
+	  <link href="bootstrap.min.css" rel="stylesheet">
+	  <script src="angular.min.js"></script>
+	  <link href="style.css" rel="stylesheet">
+	  <script src="app.js"></script>
+	</head>
+	<body ng-app="tictactoe" ng-controller="MainCtrl">
+		<div class="row">
+			<div class="col-md-3 headline" >
+				<input type="button" ng-click="restartgame()" value="Restart" />
+				<span ng-show="p1queue.length==0"><input type="checkbox" ng-model="withyogy" ng-click="playwith()" />&nbsp;Play With Yogy's Mind.</span>
+				<span ng-show="p1queue.length!=0 && withyogy">Playing With Yogy...</span>
+				<span ng-show="p1queue.length!=0 && !withyogy">Playing With Friend...</span>
+				<span ng-show="p1queue.length!=0">{{playerturnmsg}}</span>
+			</div>
+			<div class="col-md-2" style="">
+				{{result}}
+			</div>
+		</div>
+		<div class="row" >
+			<div class="col-md-3 table-responsive">
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table">
+							<tr ng-repeat="boardrows in board">
+								<td ng-repeat="boardcols in boardrows">
+									<div class="checkboxFour"> 
+										<input id="{{boardcols}}" type="checkbox" ng-click="playeraction(boardcols)" ng-model="boardcol[boardcols]" ng-disabled="boardcol[boardcols]" />
+										<label ng-class="{
+										'p1':p1queue.indexOf(boardcols)!=-1,
+										'p2':p2queue.indexOf(boardcols)!=-1,
+										'remain':remaincells.indexOf(boardcols)!=-1
+										}"  
+										for="{{boardcols}}"></label>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</body>
+</html>

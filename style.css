@@ -1,0 +1,50 @@
+table {
+    border-collapse: collapse;
+}
+table, td, th {
+    border: 1px solid white;
+}
+.table > tbody > tr > td{
+	padding: 0px;
+}
+.checkboxFour {
+  	width: 100%;
+  	height: 100%;
+  	background: #ddd;
+  	border-radius: 100%;
+  	position: relative;
+ 	
+}
+.checkboxFour label {
+  	display: block;
+  	width: 100%;
+  	height: 100%;
+  	-webkit-transition: all .2s ease;
+ 	-moz-transition: all .2s ease;
+ 	-o-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+  	transition: all .2s ease;
+  	cursor: pointer;
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	z-index: 1;
+  	background: #333;
+    
+}
+.checkboxFour input[type=checkbox]  {
+  	margin: 17px 5px 0;
+}
+.checkboxFour input[type=checkbox]:checked + .p1 {
+	background: #26ca28;
+}
+.checkboxFour input[type=checkbox]:checked + .p2 {
+	background: red;
+}
+.checkboxFour input[type=checkbox]:checked + .remain {
+	background: #afafaf;
+}
+.headline {
+  height: 35px;
+  padding-top: 5px
+}
