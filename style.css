@@ -1,8 +1,13 @@
 table {
     border-collapse: collapse;
+
 }
 table, td, th {
-    border: 1px solid white;
+    border: 3px solid #952424;
+}
+.table{
+        margin-bottom: 0;
+
 }
 .table > tbody > tr > td{
 	padding: 0px;
@@ -14,6 +19,9 @@ table, td, th {
   	border-radius: 100%;
   	position: relative;
  	
+}
+.row{
+  margin: 0 0 0 -7px;
 }
 .checkboxFour label {
   	display: block;
@@ -29,7 +37,7 @@ table, td, th {
   	top: 0px;
   	left: 0px;
   	z-index: 1;
-  	background: #333;
+  	background: #1b5422;
     
 }
 .checkboxFour input[type=checkbox]  {
@@ -48,9 +56,23 @@ body{
   background-color: #9E3B33;
 }
 .headline {
-  height: 70px;
-  padding-top: 5px;
-  color: white;
+   
+    background-image: url("tic.png");
+    background-repeat: no-repeat;
+    height: 148px;
+    color: #e4285d;
+    font-size: 17px;
+    padding-top: 7px;
+    padding-left: 27px;
+    text-align: right;
+    font-weight: bold;
+
+
+
+}
+.headline2{
+padding-top: 51px;
+
 }
 .logo{
   height: 7%;
@@ -59,7 +81,8 @@ body{
 
 }
 .header{
-   background-color: #E48743;
+   background-image:url("tic.png");
+   background-repeat: no-repeat; 
    margin: 0;
  }
 
